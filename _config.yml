@@ -1,3 +1,7 @@
 name: Mattias
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+collections:
+  writing:
+    output: true
+    permalink: /writing/:path/

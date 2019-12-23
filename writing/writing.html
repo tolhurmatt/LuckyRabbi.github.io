@@ -2,3 +2,8 @@
 layout: post
 title: My Writing
 ---
+{% for writing in site.writing %}
+	<div class="writing">
+		<h2><a href="{{ writing.url }}">{{ writing.title }} </a></h2>		
+	</div>
+{% endfor %}
