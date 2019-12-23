@@ -1,2 +1,2 @@
 # LuckyRabbi.github.io
-A test blog!
+A test blog! But does it actually work?
