@@ -8,22 +8,26 @@
 		<body>
 			<nav>
 	    		<ul>
-	        		<li id="l1"><a href="\index.html">Home</a></li>
-		        	<li><a href="\about.html">About</a></li>
-		        	<li><a href="\writing.html">Writing</a></li>
-	        		<li><a href="\blog.html">Blog</a></li>
+	    			{% assign navigation_pages = site.html_pages | sort: 'navigation_weight'%}
+	    			{% for p in navigation_pages %}
+	    				{% if p.navigation_weight %}
+	    					<li>
+	    						<a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %} {% if p.navigation_weight == 1%} id="l1" {% endif %}>
+	    							{{ p.title }}
+	    						</a>
+	    					</li>
+	    				{% endif %}
+	    			{% endfor %}
 	    		</ul>
 			</nav>
-			<div class="container">
+			<div class="frame">
+				<h1> {{ page.title }} </h1>
+				<div class="container">
 			
-			{{ content }}
+					{{ content }}
 			
-			</div><!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li></li>
-	        		<li></li>
-				</ul>
-			</footer>
+				</div><!-- /.container -->
+			</div>
+
 		</body>
 	</html>
