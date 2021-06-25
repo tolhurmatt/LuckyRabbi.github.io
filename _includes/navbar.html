@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    {% assign navigation_pages = site.html_pages | sort: 'navigation_weight'%}
+    <a class="navbar-brand ps-2" href="#">Mattias</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="navbar-nav text-end px-2">
+        {% for p in navigation_pages %}
+          <!-- a class="nav-item nav-link active" href="/">Home</a>
+          <a class="nav-item nav-link" href="/about.html">About</a -->
+          {% if p.url == page.url %}
+          <a href="{{ p.url }}" {% if p.url == page.url %}class="nav-item nav-link active"{% endif %}>
+                    {{ p.title }}
+          </a>
+          {% endif %}
+          {% if p.url != page.url %}
+          <a href="{{ p.url }}" class="nav-item nav-link">
+                    {{ p.title }}
+          </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+</nav>

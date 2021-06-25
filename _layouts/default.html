@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 	<html>
 		<head>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+    		<meta charset="utf-8">
 			<title>{{ page.title }}</title>
+			<!-- link to bootstrap stylesheet -->
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
+			<link rel="stylesheet" href="{{ site.posts.directory }}/css/main.css">
 		</head>
 		<body>
-			<nav>
-	    		<ul>
-	    			{% assign navigation_pages = site.html_pages | sort: 'navigation_weight'%}
-	    			{% for p in navigation_pages %}
-	    				{% if p.navigation_weight %}
-	    					<li>
-	    						<a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %} {% if p.navigation_weight == 1%} id="l1" {% endif %}>
-	    							{{ p.title }}
-	    						</a>
-	    					</li>
-	    				{% endif %}
-	    			{% endfor %}
-	    		</ul>
-			</nav>
+			{% include navbar.html %}
+			{% if page.title != "Home" %}
 			<div class="frame">
-				<h1> {{ page.title }} </h1>
-				<div class="container">
+				<div class="container-fluid">
 			
 					{{ content }}
 			
 				</div><!-- /.container -->
 			</div>
-
+			{% endif %}
+			{% if page.title == "Home" %}
+				{% include landing.html%}
+			{% endif %}
+			<!-- I want to make this smaller and centred -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 		</body>
 	</html>

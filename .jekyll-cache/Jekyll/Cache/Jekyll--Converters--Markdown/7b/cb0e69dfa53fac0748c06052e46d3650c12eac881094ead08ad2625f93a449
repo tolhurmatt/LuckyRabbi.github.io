@@ -1,8 +1,12 @@
-I"õ<h1 id="this-is-a-post">This is a post</h1>
+I"i<h1 id="this-is-a-post">This is a post</h1>
 
 <p>Not a great post, but a post nonetheless.</p>
 
 <h2 id="markdown">Markdown</h2>
 
 <p>A really good cheatsheet can be found <a href="https://packetlife.net/media/library/16/Markdown.pdf">here</a></p>
+
+<h1 id="markdown-with-jekyll-and-bootstrap">Markdown with Jekyll and Bootstrap</h1>
+
+<p>The idea is that I can</p>
 :ET

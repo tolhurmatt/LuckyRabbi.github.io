@@ -3,10 +3,27 @@ layout: default
 title: Blog
 navigation_weight: 2
 ---
-<ul class="posts">
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class=col-sm-8>
+    <h1 class="pt-2"> {{ page.title }} </h1>
+  </div>
+  <div class="col-sm-2"></div>
+</div>
 
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-  {% endfor %}
+
+{% for post in site.posts %}
+  <div class="row py-2 px-3">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 border bg-light rounded">
+      <div class="datetime align-top">{{ post.date | date_to_string }}</div>
+      <div class="post"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></div>
+      <details>
+        <summary>Read More</summary>
+        {{ post.abstract }}
+      </details>
+      </div>
+    <div class="col-sm-2"></div>
+  </div>
+{% endfor %}
   
-</ul>

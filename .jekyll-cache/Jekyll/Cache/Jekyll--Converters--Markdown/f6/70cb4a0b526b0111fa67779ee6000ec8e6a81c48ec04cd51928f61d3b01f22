@@ -1,0 +1,95 @@
+I"S<p>library(“growthcurver”)
+library(“tidyverse”)</p>
+
+<h2 id="-attaching-packages--tidyverse-130-">– Attaching packages ————————————— tidyverse 1.3.0 –</h2>
+
+<h2 id="v-ggplot2-333-----v-purrr---034">v ggplot2 3.3.3     v purrr   0.3.4</h2>
+<h2 id="v-tibble--310-----v-dplyr---104">v tibble  3.1.0     v dplyr   1.0.4</h2>
+<h2 id="v-tidyr---112-----v-stringr-140">v tidyr   1.1.2     v stringr 1.4.0</h2>
+<h2 id="v-readr---140-----v-forcats-051">v readr   1.4.0     v forcats 0.5.1</h2>
+
+<h2 id="-conflicts--tidyverse_conflicts-">– Conflicts —————————————— tidyverse_conflicts() –</h2>
+<h2 id="x-dplyrfilter-masks-statsfilter">x dplyr::filter() masks stats::filter()</h2>
+<h2 id="x-dplyrlag----masks-statslag">x dplyr::lag()    masks stats::lag()</h2>
+
+<p>library(“readxl”)
+library(“writexl”)</p>
+
+<h2 id="make-this-the-reader-function-">Make this the reader function :)</h2>
+<p>filenames = list.files(path = paste(getwd(),”/Inputs”, sep=””))</p>
+
+<h1 id="printfilenames3">print(filenames[3])</h1>
+
+<p>time_to_hours &lt;- function(time_string){
+  # Split the string to get the numerical value
+  x = str_split(time_string, “ h”)</p>
+
+<p># Ignore if only the hour is present. Checks that the second string is non-empty
+  if (unlist(x[[1]])[2] != “”){
+    #print(“There is minutes present”)
+    c = str_split(x[[1]], “ min”)
+    return(as.numeric(c[[1]]) + ((as.numeric(c[[2]])[1])/60))
+  }</p>
+
+<p># Convert to hours
+  return(as.numeric(unlist(x[[1]])[1]))
+}</p>
+
+<h1 id="check-that-this-works---output-should-be-0">Check that this works - output should be 0</h1>
+<p>#time_to_hours(“0 h”)</p>
+<h1 id="check-that-this-works---output-should-be-05">Check that this works - output should be 0.5</h1>
+<p>#time_to_hours(“0 h 30 min”)
+‘’’
+for(i in 1:length(filenames)){</p>
+
+<p>print(paste(“reading plate”, filenames[i], “………”))</p>
+
+<p>wd = getwd()</p>
+
+<p># String that determines what data to read A11:CT93 for a standard 96well plate
+  #data_range = “A11:BV93”</p>
+
+<p>data = read_xlsx(paste(wd,”/Inputs/”, filenames[i], sep=””), range=”A11:CT93”) # The range should not change from plate to plate.</p>
+
+<p>print(“Converting format………”)</p>
+
+<p># Convert to dataframe for later use
+  data_df = list2DF(data)</p>
+
+<p># Remove the 1st Column… eventually make this smart.
+  data_df = data_df[,2:98]
+  # Remove the 2nd Row by taking the complement… eventually make this smart
+  data_df = data_df[-1,]</p>
+
+<p># Rename the time column for GC
+  names(data_df)[1] = “time”</p>
+
+<p># Make everything numeric, readxl reads as strings.
+  d = data_df
+  d[2:97] = sapply(data_df[2:97], as.numeric)</p>
+
+<p># Convert all of the times into hours
+  for(j in seq_along(1:81)){
+    d$time[j] = time_to_hours(d$time[j])
+  }
+  # Make all of these times numeric, R reverts to the column type.
+  d$time = sapply(d$time, as.numeric)</p>
+
+<p># Not even sure if this is necessary
+  d = as.data.frame(d)</p>
+
+<p>print(“success!”)
+  #print(d)</p>
+
+<p>setwd(paste(wd,”/Outputs/”,sep=””))</p>
+
+<p>print(“Saving Growth Curves…\n”)
+  # Plot the growth curves
+  gc_fit = SummarizeGrowthByPlate(d, plot_fit = T, plot_file=paste(filenames[i],”_growth_curve”,”.pdf”, sep=””))</p>
+
+<p>write_xlsx(gc_fit, path = filenames[i])</p>
+
+<p>setwd(wd)
+}
+‘’’</p>
+:ET
