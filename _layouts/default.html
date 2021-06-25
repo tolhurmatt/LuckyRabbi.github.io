@@ -14,16 +14,15 @@
 			{% if page.title != "Home" %}
 			<div class="frame">
 				<div class="container-fluid">
-			
-					{{ content }}
-			
+					{% if page.title != Blog %}
+						{{ content }}
+					{% endif %}
 				</div><!-- /.container -->
 			</div>
 			{% endif %}
 			{% if page.title == "Home" %}
 				{% include landing.html%}
 			{% endif %}
-			<!-- I want to make this smaller and centred -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 		</body>
 	</html>
