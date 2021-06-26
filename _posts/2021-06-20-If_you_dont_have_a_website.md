@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "If you don't have a website you don't exist"
+title: "I'm online, therefore I exist'"
 date: 2021-06-20
 version: 0.1
 abstract: "In which I outline what I want this website to be and have a place to both spitball ideas and have a sandbox to style them."
 ---
 
-# If you don't have a website, you don't exist
+# I'm online, therefore I exist
 
 This adage is a bit tongue-in-cheek but I think the sentiment is genuine. Much of the interesting work that I want to do involves some computational or digital component, and so the best way to hone my skills is to create a platform to share my work. This website is exactly that, but I don't want it to serve the sole purpose of showcasing my work, I want it to reflect some of my thinking about the world and represent some part of me as a human being. 
 
