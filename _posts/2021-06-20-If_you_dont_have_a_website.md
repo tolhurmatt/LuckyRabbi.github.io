@@ -4,7 +4,6 @@ title: "If you don't have a website you don't exist"
 date: 2021-06-20
 version: 0.1
 abstract: "In which I outline what I want this website to be and have a place to both spitball ideas and have a sandbox to style them."
-toc: true
 ---
 
 # If you don't have a website, you don't exist
@@ -28,10 +27,14 @@ So, let's break it down even further, because I certainly want to have each of t
 ### The Landing Page 
 {:.landing}
 
+**The Intention:** a sleek introduction to my website.
+
 The simplest possible thing to do here is to have my name, a picture of myself (is that even necessary or is it purely self-indulgent?), some quippy non-commital details about myself and maybe some extra flair. This is what people will see first when (if) they come to my website, so it will need to make a statement. 
 
 
 ### The Blog
+
+**The Intention:** documenting my journey of writing code, buiding things, failing often and sometimes succeeding.
 
 Having a blog seems self-explanatory, but I think this intention is the most important one to set clearly for the purposes of **this** post. That's because I haven't actually spent any time working on the design of the catalogue *or* the posts themselves, so this blog post will need to contain the elements that are likely to pop up in the future posts that I make. Right now, the catalogue of posts looks like this:
 
@@ -47,7 +50,7 @@ Immediately, the fact that there is a scrollbar horizontally should jump out at 
 
 There is a little bit of nice functionality which is hidden beneath the horrendous styling shown above, but I would like to expand. Jekyll has native support for posts, which by using some [liquid](https://jekyllrb.com/docs/liquid/) can easily generate a list of posts in chronological order. It's as simple as adding a for loop over each post.
 
-```
+~~~
 % for post in site.posts %
   <div class="row py-2 px-3">
     <div class="col-sm-2"></div>
@@ -62,7 +65,8 @@ There is a little bit of nice functionality which is hidden beneath the horrendo
     <div class="col-sm-2"></div>
   </div>
 % endfor %
-```
+~~~
+{: .language-html}
 
 The features that I want to add to the list of posts are:
 
@@ -81,6 +85,7 @@ I've also discovered that I can add bootstrap classes quite easily because of kr
 Some of the features I want to add are:
 
 - A table of contents that is sticky to the left hand side of the screen for web-browsers and at the top of the page on mobile?
+- An accordion to hide and show code, more technical posts should have code expanded enabled by default whereas less technical posts should have it disabled by default.
 - A progress bar, that fills up slowly as the page is read through.
 - A version control system, which Jekyll will be able to recognise. If this works you are currently reading version {{ page.version }}
 
@@ -91,10 +96,19 @@ In the above screenshot I had included a light-grey border around the element, I
 
 ### My Writing
 
+**The Intention:** to have a place to put my writing, bad, good, and everything in between.
+
 Writing is something that I love to do. A lot of the writing that I do doesn't fit well with my work, and so it would make sense to have a seperate place to put my writing. This section will be very simple, have a list of my writing, without dates or any other flairs.
 
 The material will probably be aligned very simply, no outlines or any extra styling. Just the writing.
 
 ### My Portfolio
 
+**The Intention:** a collection of my technical skills.
+
+A collection of my most interesting projects, I really want to put a cool fusion of biotechnology, machine learning, bioinformatics and mathematics here. This will be a showcase of my technical skill.
+
 ### About Me 
+
+**The Intention:** a voyeuristic insight into the things I care about.
+

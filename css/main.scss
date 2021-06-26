@@ -34,7 +34,9 @@ details main {
 
 .toc-entry {
   text-decoration: none;
-  list-style: none;
+  li{
+    list-style: none;
+  }
   a {
     text-decoration: none;
     color: inherit;
@@ -42,5 +44,11 @@ details main {
   a:hover {
     color:#00A0C6;
     cursor: pointer;
+  }
+}
+
+code{
+  .language-HTML{
+
   }
 }

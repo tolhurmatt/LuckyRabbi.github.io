@@ -1,0 +1,18 @@
+I"@<h1 id="elements-that-i-will-need-to-style">Elements that I will need to style</h1>
+
+<ul>
+  <li>Lists</li>
+  <li>Images</li>
+  <li>Tables</li>
+  <li>Code blocks</li>
+  <li>Horizonal Lines</li>
+  <li>Definition Lists</li>
+  <li>Math</li>
+</ul>
+
+<p>There’s probably more that I will eventually realise I need, in which case I will just update this document and have a go at styling them. The first element, a list, is already above.</p>
+
+<p>The point of reference for the elements that I will be using is <a href="&quot;https://kramdown.gettalong.org/index.html&quot;">kramdown</a>, a Ruby library for parsing and converting a superset of Markdown. There is quite a bit of detail to it and I’m still learning, such is the process.</p>
+
+<p>Images are also already taken care of, I just need to put them in HTML code instead of</p>
+:ET
