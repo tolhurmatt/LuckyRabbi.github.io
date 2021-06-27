@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "Styling Test Document"
+title: "The Subject of Style(ing)"
 date: 2021-06-19
 version: 0.1
 abstract: "In which I fill the page with as many of the elements that I will need to style to make all of my blog posts look good."
+use_math: true
 ---
 
 # Elements that I will need to style
@@ -24,8 +25,35 @@ Images are also already taken care of, I just need to put them in HTML code inst
 
 ## Code Blocks
 
-Instead of trying to figure out a solution on my own I am using [highligh.js]("https://highlightjs.org/"), which seems to be very convenient and just works right out of the box. 
+Instead of trying to figure out a solution on my own I am using [highlight.js]("https://highlightjs.org/"), which seems to be very convenient and just works right out of the box. 
 
 **Put a before and after here**
 
-##
+## Tables
+
+A table would be a useful thing to include, the way to include them in markdown, or more specifically kramdown, is quite easy.
+
+| Header1 | Header2 | Header3 |
+|:--------|:-------:|--------:|
+| cell 1   | cell 2   | cell 3   |
+| cell 4   | cell 5   | cell 6   |
+|----
+| cell 1   | cell 2   | cell 3   |
+| cell 4   | cell 5   | cell 6   |
+|=====
+| Footer 1   | Footer 2   | Footer 3
+
+
+The table right now does not look good at all - although it is a convenient way to include a table in a markdown document 
+
+## Horizontal Lines
+
+
+## Definition Lists
+
+
+## Math
+
+Okay this one is actually quite important, from what I can tell kramdown doesn't by default have a maths display engine. That is very bad! Let's test this out.
+
+This should be an inline maths formula:  $$ x = \frac{3t^{2}+4t}{3y^{4} - 15y^{2}} $$

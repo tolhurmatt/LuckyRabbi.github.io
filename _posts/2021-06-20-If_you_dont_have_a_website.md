@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "I'm online, therefore I exist'"
+title: "I'm online, therefore I exist"
 date: 2021-06-20
 version: 0.1
 abstract: "In which I outline what I want this website to be and have a place to both spitball ideas and have a sandbox to style them."
+use_math: true
 ---
 
 # I'm online, therefore I exist
