@@ -1,4 +1,4 @@
-I"V<h1 id="elements-that-i-will-need-to-style">Elements that I will need to style</h1>
+I"…<h1 id="elements-that-i-will-need-to-style">Elements that I will need to style</h1>
 
 <ul>
   <li>Lists</li>
@@ -26,7 +26,7 @@
 
 <p>A table would be a useful thing to include, the way to include them in markdown, or more specifically kramdown, is quite easy.</p>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th style="text-align: left">Header1</th>
@@ -67,7 +67,7 @@
   </tfoot>
 </table>
 
-<p>The table right now does not look good at all - although it is a convenient way to include a table in a markdown document</p>
+<p>The table right now does not look good at all - although it is a convenient way to include a table in a markdown document. This can be fixed very easily thanks to bootstrap by adding the <code class="highlighter-rouge">{: .table}</code> attribute list definiton to opt-in to bootstraps table styling. I will have a look at how I want these to be formatted at a later date but for now it ticks all of the boxes.</p>
 
 <h2 id="horizontal-lines">Horizontal Lines</h2>
 

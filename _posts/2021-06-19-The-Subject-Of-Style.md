@@ -42,9 +42,9 @@ A table would be a useful thing to include, the way to include them in markdown,
 | cell 4   | cell 5   | cell 6   |
 |=====
 | Footer 1   | Footer 2   | Footer 3
+{: .table}
 
-
-The table right now does not look good at all - although it is a convenient way to include a table in a markdown document 
+Without formatting, the table does not look good at all - although it is a convenient way to include a table in a markdown document. This can be fixed very easily thanks to bootstrap by adding the `{: .table}` attribute list definiton to opt-in to bootstraps table styling. I will have a look at how I want these to be formatted at a later date but for now it ticks all of the boxes.
 
 ## Horizontal Lines
 
