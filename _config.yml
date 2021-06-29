@@ -4,5 +4,3 @@ collections:
   writing:
     output: true
     permalink: /writing/:path/
-plugins:
-  - jekyll-toc
