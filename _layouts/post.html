@@ -7,16 +7,15 @@ layout: default
 
 
 <div class="container-fluid">
-  <div class="row pe-5 me-5 gap-3">
-    <div class="col-3-auto d-none d-xxl-block">
-        <div class="position-fixed">{% include toc.html html=content class="toc-entry" %}</div>
-    </div>
-  </div>
   <div class="row">
-    <div class="col-sm-3"></div>
+    <div class="col-3">
+        <nav id="toc_scroll" class="navbar d-none d-xl-block sticky-top fixed-top py-3">{% include toc.html html=content class="toc-entry"%}</nav>
+    </div>
     <div class="col-sm-7">
       {{ content }}
     </div>
     <div class="col-sm-2"></div>
   </div>
 </div>
+
+

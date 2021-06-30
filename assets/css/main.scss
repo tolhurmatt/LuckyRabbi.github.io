@@ -1,12 +1,6 @@
 ---
 ---
-html{
-  scroll-behavior: smooth;
-}
 
-body{
-  position: relative;
-}
 
 details {
   overflow: hidden;
@@ -50,9 +44,6 @@ details main {
   a:hover {
     color:#00A0C6;
     cursor: pointer;
-  }
-  .active {
-    color:#00A0C6;
   }
 }
 

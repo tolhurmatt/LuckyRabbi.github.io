@@ -1,4 +1,4 @@
-I"*"<h1 id="im-online-therefore-i-exist">I’m online, therefore I exist</h1>
+I"*%<h1 id="im-online-therefore-i-exist">I’m online, therefore I exist</h1>
 
 <p>This adage is a bit tongue-in-cheek but I think the sentiment is genuine. Much of the interesting work that I want to do involves some computational or digital component, and so the best way to hone my skills is to create a platform to share my work. This website is exactly that, but I don’t want it to serve the sole purpose of showcasing my work, I want it to reflect some of my thinking about the world and represent some part of me as a human being.</p>
 
@@ -30,11 +30,11 @@
 
 <p>Having a blog seems self-explanatory, but I think this intention is the most important one to set clearly for the purposes of <strong>this</strong> post. That’s because I haven’t actually spent any time working on the design of the catalogue <em>or</em> the posts themselves, so this blog post will need to contain the elements that are likely to pop up in the future posts that I make. Right now, the catalogue of posts looks like this:</p>
 
-<p><img src="..\..\..\assets\catalogue.png" class="img-fluid" alt="..." /></p>
+<p><img src="\assets\images\catalogue.png" class="img-fluid" alt="..." /></p>
 
 <p>The posts themselves currently look something like this:</p>
 
-<p><img src="..\..\..\assets\post_layout.png" class="img-fluid" alt="..." /></p>
+<p><img src="\assets\images\post_layout.png" class="img-fluid" alt="..." /></p>
 
 <p>Immediately, the fact that there is a scrollbar horizontally should jump out at you, this is because I have simply added screenshots, which are large, and there is no image formatting. That’s the kind of problem that I am trying to address. So, I need to work on both the catalogue and the posts themselves, let’s start simple and work our way to the big one.</p>
 
@@ -60,13 +60,17 @@
 
 <p>The features that I want to add to the list of posts are:</p>
 
-<ul>
-  <li>An estimated time to read, which should be quite easy to write a small plugin for.</li>
+<ol>
+  <li><del>An estimated time to read, which should be quite easy to write a small plugin for.</del></li>
   <li>Tags</li>
   <li>Maybe an optional picture for extra flair</li>
   <li>Expandable abstract/short summary - already implemented but it needs to look nicer.</li>
   <li>A search feature</li>
-</ul>
+</ol>
+
+<p>It was quite easy as it turns out to write a small plugin to do read time. I didn’t write the script but there was a custom Ruby gem that did it quite nicely. I found out quickly that github pages, which I use to host this site doesn’t support <a href="https://stackoverflow.com/questions/53215356/jekyll-how-to-use-custom-plugins-with-github-pages">custom plugins</a>, although there appears to be a <a href="https://learn.cloudcannon.com/jekyll/using-jekyll-plugins/">work-around</a> but I would prefer not to take a tangent.</p>
+
+<p>The solution I ended up using was a slight variation on what I found <a href="https://int3ractive.com/blog/2018/jekyll-read-time-without-plugins/">here</a> from Trần Trọng Thanh. An elegant solution indeed.</p>
 
 <h4 id="post-layout">Post Layout</h4>
 

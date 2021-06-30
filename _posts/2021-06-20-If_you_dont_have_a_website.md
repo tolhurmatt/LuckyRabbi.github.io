@@ -39,11 +39,11 @@ The simplest possible thing to do here is to have my name, a picture of myself (
 
 Having a blog seems self-explanatory, but I think this intention is the most important one to set clearly for the purposes of **this** post. That's because I haven't actually spent any time working on the design of the catalogue *or* the posts themselves, so this blog post will need to contain the elements that are likely to pop up in the future posts that I make. Right now, the catalogue of posts looks like this:
 
-<img src="..\..\..\assets\catalogue.png" class="img-fluid" alt="...">
+<img src="{{ site.posts.directory }}\assets\images\catalogue.png" class="img-fluid" alt="...">
 
 The posts themselves currently look something like this:
 
-<img src="..\..\..\assets\post_layout.png" class="img-fluid" alt="...">
+<img src="{{ site.posts.directory }}\assets\images\post_layout.png" class="img-fluid" alt="...">
 
 Immediately, the fact that there is a scrollbar horizontally should jump out at you, this is because I have simply added screenshots, which are large, and there is no image formatting. That's the kind of problem that I am trying to address. So, I need to work on both the catalogue and the posts themselves, let's start simple and work our way to the big one.
 
@@ -71,11 +71,15 @@ There is a little bit of nice functionality which is hidden beneath the horrendo
 
 The features that I want to add to the list of posts are:
 
-- An estimated time to read, which should be quite easy to write a small plugin for.
-- Tags
-- Maybe an optional picture for extra flair
-- Expandable abstract/short summary - already implemented but it needs to look nicer.
-- A search feature
+1. <del>An estimated time to read, which should be quite easy to write a small plugin for.</del>
+2. Tags
+3. Maybe an optional picture for extra flair
+4. Expandable abstract/short summary - already implemented but it needs to look nicer.
+5. A search feature
+
+It was quite easy as it turns out to write a small plugin to do read time. I didn't write the script but there was a custom Ruby gem that did it quite nicely. I found out quickly that github pages, which I use to host this site doesn't support [custom plugins](https://stackoverflow.com/questions/53215356/jekyll-how-to-use-custom-plugins-with-github-pages), although there appears to be a [work-around](https://learn.cloudcannon.com/jekyll/using-jekyll-plugins/) but I would prefer not to take a tangent.
+
+The solution I ended up using was a slight variation on what I found [here](https://int3ractive.com/blog/2018/jekyll-read-time-without-plugins/) from Trần Trọng Thanh. An elegant solution indeed.
 
 #### Post Layout
 
