@@ -1,6 +1,12 @@
 ---
 ---
+html{
+  scroll-behavior: smooth;
+}
 
+body{
+  position: relative;
+}
 
 details {
   overflow: hidden;
@@ -32,14 +38,16 @@ details main {
   padding: 1em 2.2em;
 }
 
+
 .toc-entry {
   text-decoration: none;
   li{
     list-style: none;
+    text-decoration: none;
   }
   a {
+    color: #000;
     text-decoration: none;
-    color: inherit;
   }
   a:hover {
     color:#00A0C6;
@@ -47,10 +55,8 @@ details main {
   }
 }
 
-code{
-  .language-HTML{
-
-  }
+li.active > a{
+  color:#00A0C6
 }
 
 .post{

@@ -9,29 +9,36 @@ use_math: true
 
 # I'm online, therefore I exist
 
-This adage is a bit tongue-in-cheek but I think the sentiment is genuine. Much of the interesting work that I want to do involves some computational or digital component, and so the best way to hone my skills is to create a platform to share my work. This website is exactly that, but I don't want it to serve the sole purpose of showcasing my work, I want it to reflect some of my thinking about the world and represent some part of me as a human being. 
+The adage is a bit tongue-in-cheek but I think the sentiment is genuine. Much of the interesting work that I want to do involves some computational or digital component, and so the best way to hone my skills is to create a platform to share my work. This website is exactly that, but I don't want it to serve the sole purpose of showcasing my work. I want it to reflect some of my thinking about the world and represent some part of me as a human being. 
 
-I read somewhere that making a personal website is much more effective if it is made with a well-defined purpose. I figure that it would be interesting for the first bonafide post on my, as of yet unfinished, website to outline what I want this website to be. In addition, this post is going to help me style the website in a nice way, my design skills leave much to be desired, and so having a reference will make a world of difference.
+I read somewhere that making a personal website is much more effective if it's made with a well-defined purpose. I figure that it would be interesting for my first bonafide post on my, as of yet unfinished website, to outline what I want this website to be. In addition, this post is going to help me style the website in a nice way; my design skills leave much to be desired, and so having a reference will make a world of difference.
 
 ## What will my website include?
 
 I haven't written down what I want my website to include. A brief spitball of possible elements are as follows:
 
-1. A landing page that has my face, a quick summary of who I am and what I enjoy.
-2. A blog that will include some projects that I find interesting, to give me a place to practice communicating these projects to other people and incentivise fleshing them out and following through.
-3. A collection of my writing, should I decide that any of my writing is of sufficient quality to merit being shared.
-4. A portfolio of the projects that demonstrate my competence. Skills I want to demonstrate competence in include research ability, academic writing, bioinformatics, programming, machine learning etc.
-5. An About me section/CV - the section that I am most hesitant to write.
+1. A **landing page** that has my face, a quick summary of who I am and what I enjoy.
+2. A **blog** that will include some projects that I find interesting, to give me a place to practice communicating these projects to other people and incentivise fleshing them out and following through.
+3. A collection of **my writing**, should I decide that any of my writing is of sufficient quality to be shared.
+4. A **portfolio** of the projects that demonstrate my competence. Skills I want to demonstrate competence in include research ability, academic writing, bioinformatics, programming, machine learning etc.
+5. An **About** me section/CV - the section that I am most hesitant to write.
 
 So, let's break it down even further, because I certainly want to have each of these elements on my website but simply writing this down does not a good website make. 
 
 ### The Landing Page 
 {:.landing}
 
-**The Intention:** a sleek introduction to my website.
+**The Intention:** a sleek introduction to my website, and to me.
 
 The simplest possible thing to do here is to have my name, a picture of myself (is that even necessary or is it purely self-indulgent?), some quippy non-commital details about myself and maybe some extra flair. This is what people will see first when (if) they come to my website, so it will need to make a statement. 
 
+The landing page should outline my interests. Most of these are obvious for someone making a website and choosing not to use the myriad website building tools that are available, easy to use and allow a novice like me to build a sleek and functional webstie in minutes rather than days. Some interest are not so obvious. At heart I am a biologist and a mathematician, I write code and I love to skateboard; I want people to see these things as I see them, disparate at first but fundamentally related (even the skateboarding) at some level.
+
+In my head, I see having a few icons, that summarise these key interests. Mathematics, Biology, Programming, Machine Learning, Education, Skateboarding. Finally, a footer that has some links to social media sites, maybe LinkedIn, Instagram? I really don't want to make a LinkedIn but I've been told that I would be foolish not to - while I don't mind being foolish, I don't like not doing things. Here's a rough sketch of what this might look like in the future.
+
+<img src="{{ site.posts.directory }}\assets\images\Landing_outline.png" class="img-fluid" alt="...">
+
+If you're reading this, you can go back home and see how close I came to this feverish sketch!
 
 ### The Blog
 
@@ -46,6 +53,9 @@ The posts themselves currently look something like this:
 <img src="{{ site.posts.directory }}\assets\images\post_layout.png" class="img-fluid" alt="...">
 
 Immediately, the fact that there is a scrollbar horizontally should jump out at you, this is because I have simply added screenshots, which are large, and there is no image formatting. That's the kind of problem that I am trying to address. So, I need to work on both the catalogue and the posts themselves, let's start simple and work our way to the big one.
+
+
+
 
 #### Lists of Posts
 
@@ -76,6 +86,16 @@ The features that I want to add to the list of posts are:
 3. Maybe an optional picture for extra flair
 4. Expandable abstract/short summary - already implemented but it needs to look nicer.
 5. A search feature
+
+The blog will be composed of
+
+| Post List |       |         |        |
+|:----------|:------|:--------|:-------|
+|           |Element| Purpose | Status |
+|           |Date   |         |        |
+|           |Time to Read|    |        |
+|           |Summary   |      |        |
+{: .table}
 
 It was quite easy as it turns out to write a small plugin to do read time. I didn't write the script but there was a custom Ruby gem that did it quite nicely. I found out quickly that github pages, which I use to host this site doesn't support [custom plugins](https://stackoverflow.com/questions/53215356/jekyll-how-to-use-custom-plugins-with-github-pages), although there appears to be a [work-around](https://learn.cloudcannon.com/jekyll/using-jekyll-plugins/) but I would prefer not to take a tangent.
 
