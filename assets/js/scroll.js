@@ -5,7 +5,6 @@ window.addEventListener('DOMContentLoaded', () => {
       const id = entry.target.getAttribute('id');
       if (entry.intersectionRatio > 0) {
         document.querySelector(`nav ul li a[href="#${id}"]`).parentElement.classList.add('active');
-        console.log("Intersect!")
       } else {
         document.querySelector(`nav ul li a[href="#${id}"]`).parentElement.classList.remove('active');
       }
