@@ -87,14 +87,15 @@ The features that I want to add to the list of posts are:
 4. Expandable abstract/short summary - already implemented but it needs to look nicer.
 5. A search feature
 
-The blog will be composed of
+Here's a handy table outlining what the post list will be composed of
 
 | Post List |       |         |        |
 |:----------|:------|:--------|:-------|
-|           |Element| Purpose | Status |
-|           |Date   |         |        |
-|           |Time to Read|    |        |
-|           |Summary   |      |        |
+|           |**Element**| **Purpose** | **Status** |
+|           |Date   | Pretty self explanatory I think.        | Already added although the formatting might be subject to change.       |
+|           |Time to Read|  I personally love this feature in blog posts, unless something really interests me I don't want to spend 30mins reading it.  | Added, although I am currently using 180wpm and haven't looked into what the average reading time actually is.       |
+|           |Summary   |   A brief snippet or outline of the post, to see if the content interest the reader.   |    Implemented but I don't really like the formatting.    |
+|           |Tags           | This is for a search feature later down the line, so that users can quickly find specific topics. | Not currently implemented. |
 {: .table}
 
 It was quite easy as it turns out to write a small plugin to do read time. I didn't write the script but there was a custom Ruby gem that did it quite nicely. I found out quickly that github pages, which I use to host this site doesn't support [custom plugins](https://stackoverflow.com/questions/53215356/jekyll-how-to-use-custom-plugins-with-github-pages), although there appears to be a [work-around](https://learn.cloudcannon.com/jekyll/using-jekyll-plugins/) but I would prefer not to take a tangent.

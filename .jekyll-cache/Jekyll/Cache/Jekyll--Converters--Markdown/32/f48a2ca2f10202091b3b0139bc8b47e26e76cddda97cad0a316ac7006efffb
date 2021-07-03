@@ -1,4 +1,4 @@
-I"�.<h1 id="im-online-therefore-i-exist">I’m online, therefore I exist</h1>
+I"�1<h1 id="im-online-therefore-i-exist">I’m online, therefore I exist</h1>
 
 <p>The adage is a bit tongue-in-cheek but I think the sentiment is genuine. Much of the interesting work that I want to do involves some computational or digital component, and so the best way to hone my skills is to create a platform to share my work. This website is exactly that, but I don’t want it to serve the sole purpose of showcasing my work. I want it to reflect some of my thinking about the world and represent some part of me as a human being.</p>
 
@@ -76,7 +76,7 @@
   <li>A search feature</li>
 </ol>
 
-<p>The blog will be composed of</p>
+<p>Here’s a handy table outlining what the post list will be composed of</p>
 
 <table class="table">
   <thead>
@@ -90,27 +90,33 @@
   <tbody>
     <tr>
       <td style="text-align: left"> </td>
-      <td style="text-align: left">Element</td>
-      <td style="text-align: left">Purpose</td>
-      <td style="text-align: left">Status</td>
+      <td style="text-align: left"><strong>Element</strong></td>
+      <td style="text-align: left"><strong>Purpose</strong></td>
+      <td style="text-align: left"><strong>Status</strong></td>
     </tr>
     <tr>
       <td style="text-align: left"> </td>
       <td style="text-align: left">Date</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left">Pretty self explanatory I think.</td>
+      <td style="text-align: left">Already added although the formatting might be subject to change.</td>
     </tr>
     <tr>
       <td style="text-align: left"> </td>
       <td style="text-align: left">Time to Read</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left">I personally love this feature in blog posts, unless something really interests me I don’t want to spend 30mins reading it.</td>
+      <td style="text-align: left">Added, although I am currently using 180wpm and haven’t looked into what the average reading time actually is.</td>
     </tr>
     <tr>
       <td style="text-align: left"> </td>
       <td style="text-align: left">Summary</td>
+      <td style="text-align: left">A brief snippet or outline of the post, to see if the content interest the reader.</td>
+      <td style="text-align: left">Implemented but I don’t really like the formatting.</td>
+    </tr>
+    <tr>
       <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
+      <td style="text-align: left">Tags</td>
+      <td style="text-align: left">This is for a search feature later down the line, so that users can quickly find specific topics.</td>
+      <td style="text-align: left">Not currently implemented.</td>
     </tr>
   </tbody>
 </table>
