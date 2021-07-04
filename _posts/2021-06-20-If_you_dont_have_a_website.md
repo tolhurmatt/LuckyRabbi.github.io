@@ -59,7 +59,7 @@ Immediately, the fact that there is a scrollbar horizontally should jump out at 
 
 #### Lists of Posts
 
-There is a little bit of nice functionality which is hidden beneath the horrendous styling shown above, but I would like to expand. Jekyll has native support for posts, which by using some [liquid](https://jekyllrb.com/docs/liquid/) can easily generate a list of posts in chronological order. It's as simple as adding a for loop over each post.
+There is a little bit of nice functionality which is hidden beneath the horrendous styling shown above, but I would like to expand. Jekyll has native support for posts, which by using some [liquid](https://jekyllrb.com/docs/liquid/){: target="_blank"} can easily generate a list of posts in chronological order. It's as simple as adding a for loop over each post.
 
 ~~~
 % for post in site.posts %
@@ -98,9 +98,9 @@ Here's a handy table outlining what the post list will be composed of
 |           |Tags           | This is for a search feature later down the line, so that users can quickly find specific topics. | Not currently implemented. |
 {: .table}
 
-It was quite easy as it turns out to write a small plugin to do read time. I didn't write the script but there was a custom Ruby gem that did it quite nicely. I found out quickly that github pages, which I use to host this site doesn't support [custom plugins](https://stackoverflow.com/questions/53215356/jekyll-how-to-use-custom-plugins-with-github-pages), although there appears to be a [work-around](https://learn.cloudcannon.com/jekyll/using-jekyll-plugins/) but I would prefer not to take a tangent.
+It was quite easy as it turns out to write a small plugin to do read time. I didn't write the script but there was a custom Ruby gem that did it quite nicely. I found out quickly that github pages, which I use to host this site doesn't support [custom plugins](https://stackoverflow.com/questions/53215356/jekyll-how-to-use-custom-plugins-with-github-pages){: target="_blank"}, although there appears to be a [work-around](https://learn.cloudcannon.com/jekyll/using-jekyll-plugins/){: target="_blank"} but I would prefer not to take a tangent.
 
-The solution I ended up using was a slight variation on what I found [here](https://int3ractive.com/blog/2018/jekyll-read-time-without-plugins/) from Trần Trọng Thanh. An elegant solution indeed.
+The solution I ended up using was a slight variation on what I found [here](https://int3ractive.com/blog/2018/jekyll-read-time-without-plugins/){: target="_blank"} from Trần Trọng Thanh. An elegant solution indeed.
 
 #### Post Layout
 

@@ -1,4 +1,4 @@
-I"�<h1 id="elements-that-i-will-need-to-style">Elements that I will need to style</h1>
+I"�<h1 id="elements-that-i-will-need-to-style">Elements that I will need to style</h1>
 
 <ul>
   <li>Lists</li>
@@ -16,13 +16,13 @@
 
 <p>There’s probably more that I will eventually realise I need, in which case I will just update this document and have a go at styling them. The first element, a list, is already above.</p>
 
-<p>The point of reference for the elements that I will be using is <a href="&quot;https://kramdown.gettalong.org/index.html&quot;">kramdown</a>, a Ruby library for parsing and converting a superset of Markdown. There is quite a bit of detail to it and I’m still learning, such is the process.</p>
+<p>The point of reference for the elements that I will be using is <a href="https://kramdown.gettalong.org/index.html">kramdown</a>, a Ruby library for parsing and converting a superset of Markdown. There is quite a bit of detail to it and I’m still learning, such is the process.</p>
 
 <p>Images are also already taken care of, I just need to put them in HTML code instead of</p>
 
 <h2 id="code-blocks">Code Blocks</h2>
 
-<p>Instead of trying to figure out a solution on my own I am using <a href="&quot;https://highlightjs.org/&quot;">highlight.js</a>, which seems to be very convenient and just works right out of the box.</p>
+<p>Instead of trying to figure out a solution on my own I am using <a href="https://highlightjs.org/">highlight.js</a>, which seems to be very convenient and just works right out of the box.</p>
 
 <p><strong>Put a before and after here</strong></p>
 
@@ -43,7 +43,18 @@
 
 <p>R</p>
 
-<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">time_to_hours</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">time_string</span><span class="p">){</span><span class="w">
+  </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str_split</span><span class="p">(</span><span class="n">time_string</span><span class="p">,</span><span class="w"> </span><span class="s2">" h"</span><span class="p">)</span><span class="w">
+  
+  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">unlist</span><span class="p">(</span><span class="n">x</span><span class="p">[[</span><span class="m">1</span><span class="p">]])[</span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s2">""</span><span class="p">){</span><span class="w">
+    </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str_split</span><span class="p">(</span><span class="n">x</span><span class="p">[[</span><span class="m">1</span><span class="p">]],</span><span class="w"> </span><span class="s2">" min"</span><span class="p">)</span><span class="w">
+    </span><span class="nf">return</span><span class="p">(</span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">c</span><span class="p">[[</span><span class="m">1</span><span class="p">]])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">((</span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">c</span><span class="p">[[</span><span class="m">2</span><span class="p">]])[</span><span class="m">1</span><span class="p">])</span><span class="o">/</span><span class="m">60</span><span class="p">))</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="nf">return</span><span class="p">(</span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">unlist</span><span class="p">(</span><span class="n">x</span><span class="p">[[</span><span class="m">1</span><span class="p">]])[</span><span class="m">1</span><span class="p">]))</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c1">#time_to_hours("0 h")</span><span class="w">
+</span><span class="c1">#time_to_hours("0 h 30 min")</span><span class="w">
 </span></code></pre></div></div>
 
 <h2 id="tables">Tables</h2>
@@ -98,4 +109,6 @@
 <p>Okay this one is actually quite important, from what I can tell kramdown doesn’t by default have a maths display engine. That is very bad! Let’s test this out.</p>
 
 <p>This should be an inline maths formula:  \(x = \frac{3t^{2}+4t}{3y^{4} - 15y^{2}}\)</p>
+
+<p>I’m not sure how to do block mathematics perhaps a single dollar sign [ \lim_{x\to1} \frac{x^2-1}{x-1} = 2 ]</p>
 :ET

@@ -1,4 +1,4 @@
-I"�1<h1 id="im-online-therefore-i-exist">I’m online, therefore I exist</h1>
+I"32<h1 id="im-online-therefore-i-exist">I’m online, therefore I exist</h1>
 
 <p>The adage is a bit tongue-in-cheek but I think the sentiment is genuine. Much of the interesting work that I want to do involves some computational or digital component, and so the best way to hone my skills is to create a platform to share my work. This website is exactly that, but I don’t want it to serve the sole purpose of showcasing my work. I want it to reflect some of my thinking about the world and represent some part of me as a human being.</p>
 
@@ -48,7 +48,7 @@
 
 <h4 id="lists-of-posts">Lists of Posts</h4>
 
-<p>There is a little bit of nice functionality which is hidden beneath the horrendous styling shown above, but I would like to expand. Jekyll has native support for posts, which by using some <a href="https://jekyllrb.com/docs/liquid/">liquid</a> can easily generate a list of posts in chronological order. It’s as simple as adding a for loop over each post.</p>
+<p>There is a little bit of nice functionality which is hidden beneath the horrendous styling shown above, but I would like to expand. Jekyll has native support for posts, which by using some <a href="https://jekyllrb.com/docs/liquid/" target="_blank">liquid</a> can easily generate a list of posts in chronological order. It’s as simple as adding a for loop over each post.</p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% for post in site.posts %
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row py-2 px-3"</span><span class="nt">&gt;</span>
@@ -116,14 +116,14 @@
       <td style="text-align: left"> </td>
       <td style="text-align: left">Tags</td>
       <td style="text-align: left">This is for a search feature later down the line, so that users can quickly find specific topics.</td>
-      <td style="text-align: left">Not currently implemented</td>
+      <td style="text-align: left">Not currently implemented.</td>
     </tr>
   </tbody>
 </table>
 
-<p>It was quite easy as it turns out to write a small plugin to do read time. I didn’t write the script but there was a custom Ruby gem that did it quite nicely. I found out quickly that github pages, which I use to host this site doesn’t support <a href="https://stackoverflow.com/questions/53215356/jekyll-how-to-use-custom-plugins-with-github-pages">custom plugins</a>, although there appears to be a <a href="https://learn.cloudcannon.com/jekyll/using-jekyll-plugins/">work-around</a> but I would prefer not to take a tangent.</p>
+<p>It was quite easy as it turns out to write a small plugin to do read time. I didn’t write the script but there was a custom Ruby gem that did it quite nicely. I found out quickly that github pages, which I use to host this site doesn’t support <a href="https://stackoverflow.com/questions/53215356/jekyll-how-to-use-custom-plugins-with-github-pages" target="_blank">custom plugins</a>, although there appears to be a <a href="https://learn.cloudcannon.com/jekyll/using-jekyll-plugins/" target="_blank">work-around</a> but I would prefer not to take a tangent.</p>
 
-<p>The solution I ended up using was a slight variation on what I found <a href="https://int3ractive.com/blog/2018/jekyll-read-time-without-plugins/">here</a> from Trần Trọng Thanh. An elegant solution indeed.</p>
+<p>The solution I ended up using was a slight variation on what I found <a href="https://int3ractive.com/blog/2018/jekyll-read-time-without-plugins/" target="_blank">here</a> from Trần Trọng Thanh. An elegant solution indeed.</p>
 
 <h4 id="post-layout">Post Layout</h4>
 

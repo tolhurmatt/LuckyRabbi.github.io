@@ -20,13 +20,13 @@ use_math: true
 
 There's probably more that I will eventually realise I need, in which case I will just update this document and have a go at styling them. The first element, a list, is already above.
 
-The point of reference for the elements that I will be using is [kramdown]("https://kramdown.gettalong.org/index.html"), a Ruby library for parsing and converting a superset of Markdown. There is quite a bit of detail to it and I'm still learning, such is the process.
+The point of reference for the elements that I will be using is [kramdown](https://kramdown.gettalong.org/index.html){: target="_blank"}, a Ruby library for parsing and converting a superset of Markdown. There is quite a bit of detail to it and I'm still learning, such is the process.
 
 Images are also already taken care of, I just need to put them in HTML code instead of
 
 ## Code Blocks
 
-Instead of trying to figure out a solution on my own I am using [highlight.js]("https://highlightjs.org/"), which seems to be very convenient and just works right out of the box. 
+Instead of trying to figure out a solution on my own I am using [highlight.js](https://highlightjs.org/){: target="_blank"}, which seems to be very convenient and just works right out of the box. 
 
 **Put a before and after here**
 
