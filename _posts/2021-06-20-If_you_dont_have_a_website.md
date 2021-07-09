@@ -25,7 +25,7 @@ I haven't written down what I want my website to include. A brief spitball of po
 
 So, let's break it down even further, because I certainly want to have each of these elements on my website but simply writing this down does not a good website make. 
 
-### The Landing Page 
+## The Landing Page 
 {:.landing}
 
 **The Intention:** a sleek introduction to my website, and to me.
@@ -40,7 +40,7 @@ In my head, I see having a few icons, that summarise these key interests. Mathem
 
 If you're reading this, you can go back home and see how close I came to this feverish sketch!
 
-### The Blog
+## The Blog
 
 **The Intention:** documenting my journey of writing code, buiding things, failing often and sometimes succeeding.
 
@@ -54,10 +54,7 @@ The posts themselves currently look something like this:
 
 Immediately, the fact that there is a scrollbar horizontally should jump out at you, this is because I have simply added screenshots, which are large, and there is no image formatting. That's the kind of problem that I am trying to address. So, I need to work on both the catalogue and the posts themselves, let's start simple and work our way to the big one.
 
-
-
-
-#### Lists of Posts
+### Lists of Posts
 
 There is a little bit of nice functionality which is hidden beneath the horrendous styling shown above, but I would like to expand. Jekyll has native support for posts, which by using some [liquid](https://jekyllrb.com/docs/liquid/){: target="_blank"} can easily generate a list of posts in chronological order. It's as simple as adding a for loop over each post.
 
@@ -102,7 +99,7 @@ It was quite easy as it turns out to write a small plugin to do read time. I did
 
 The solution I ended up using was a slight variation on what I found [here](https://int3ractive.com/blog/2018/jekyll-read-time-without-plugins/){: target="_blank"} from Trần Trọng Thanh. An elegant solution indeed.
 
-#### Post Layout
+### Post Layout
 
 The first issue that was addressed, was the fact that there was no formatting of images. This turned out to be an easy fix, although I imagine a more elegant one exists. I simply added HTML tags into the markdown document with the `img-fluid` class. Bootstrap handled the rest.
 
@@ -120,7 +117,7 @@ The blog posts will include a number of elements that I will need to make sure a
 In the above screenshot I had included a light-grey border around the element, I have since removed this, as I think that it looks cleaner that way.
 
 
-### My Writing
+## My Writing
 
 **The Intention:** to have a place to put my writing, bad, good, and everything in between.
 
@@ -128,13 +125,13 @@ Writing is something that I love to do. A lot of the writing that I do doesn't f
 
 The material will probably be aligned very simply, no outlines or any extra styling. Just the writing.
 
-### My Portfolio
+## My Portfolio
 
 **The Intention:** a collection of my technical skills.
 
 A collection of my most interesting projects, I really want to put a cool fusion of biotechnology, machine learning, bioinformatics and mathematics here. This will be a showcase of my technical skill.
 
-### About Me 
+## About Me 
 
 **The Intention:** a voyeuristic insight into the things I care about.
 
